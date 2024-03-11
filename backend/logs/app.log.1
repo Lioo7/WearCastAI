@@ -1,84 +1,4 @@
-2024-03-11 03:04:01,892 ERROR: Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-03-11 03:04:01,978 INFO: Request: GET /api/v1/highLightTitle.png b''
-2024-03-11 03:04:01,978 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-2024-03-11 03:04:01,978 ERROR: Exception on /api/v1/highLightTitle.png [GET]
-Traceback (most recent call last):
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1484, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1458, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1440, in raise_routing_exception
-    raise request.routing_exception  # type: ignore
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/ctx.py", line 353, in match_request
-    result = self.url_adapter.match(return_rule=True)  # type: ignore
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/werkzeug/routing/map.py", line 652, in match
-    raise NotFound() from None
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 2190, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1486, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1341, in handle_user_exception
-    return self.handle_http_exception(e)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/homebrew/lib/python3.11/site-packages/flask/app.py", line 1281, in handle_http_exception
-    return self.ensure_sync(handler)(e)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/utils/logger.py", line 22, in handle_exception
-    return jsonify({'error': 'An error occurred'}), 500
-           ^^^^^^^
-NameError: name 'jsonify' is not defined
-2024-03-11 03:04:01,981 ERROR: Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-03-11 03:07:43,719 INFO: Request: GET /api/v1/weather-by-coordinates b''
-2024-03-11 03:07:43,888 ERROR: Error: 404 Not Found: Failed to fetch weather data
-2024-03-11 03:07:43,889 ERROR: Exception on /api/v1/weather-by-coordinates [GET]
-Traceback (most recent call last):
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/controllers/weather_controller.py", line 18, in get_weather_by_coordinates
-    abort(404, 'Failed to fetch weather data')
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/helpers.py", line 272, in abort
-    current_app.aborter(code, *args, **kwargs)
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/werkzeug/exceptions.py", line 861, in __call__
-    raise self.mapping[code](*args, **kwargs)
-werkzeug.exceptions.NotFound: 404 Not Found: Failed to fetch weather data
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 755, in handle_user_exception
-    return self.handle_http_exception(e)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 730, in handle_http_exception
-    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/utils/logger.py", line 22, in handle_exception
-    return jsonify({'error': 'An error occurred'}), 500
-           ^^^^^^^
-NameError: name 'jsonify' is not defined
-2024-03-11 03:07:43,902 ERROR: Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-03-11 03:07:44,151 INFO: Request: GET /favicon.ico b''
-2024-03-11 03:07:44,151 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-2024-03-11 03:07:44,152 ERROR: Exception on /favicon.ico [GET]
+2024-03-11 03:07:44,245 ERROR: Exception on /api/v1/highLightTitle.png [GET]
 Traceback (most recent call last):
   File "/Users/liozakirav/Documents/Projects/WearCastAI/backend/venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
     rv = self.dispatch_request()
@@ -114,6 +34,67 @@ Traceback (most recent call last):
     return jsonify({'error': 'An error occurred'}), 500
            ^^^^^^^
 NameError: name 'jsonify' is not defined
-2024-03-11 03:07:44,156 ERROR: Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
-2024-03-11 03:07:44,244 INFO: Request: GET /api/v1/highLightTitle.png b''
-2024-03-11 03:07:44,244 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:07:44,247 ERROR: Error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2024-03-11 03:08:52,596 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:08:53,069 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:08:53,069 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:08:53,132 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:08:53,132 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:08:53,155 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:08:53,156 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:08:54,082 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:08:54,082 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:11:02,998 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:11:03,002 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:11:35,262 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:11:35,496 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:11:35,496 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:15:23,210 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:15:23,646 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:15:23,646 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:15:23,763 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:15:23,764 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:15:23,821 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:15:23,821 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:31,835 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:17:32,281 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:17:32,282 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:32,401 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:17:32,402 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:32,455 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:17:32,456 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:56,210 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:17:56,615 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:17:56,616 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:17:56,616 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:56,616 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:17:56,723 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:17:56,723 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:18:36,409 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:18:36,762 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:18:36,763 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:18:36,863 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:18:36,863 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:18:36,918 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:18:36,919 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:19:24,280 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:19:24,560 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:19:24,561 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:28:10,170 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 03:28:10,804 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 03:28:10,805 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:28:10,998 INFO: Request: GET /api/v1/highLightTitle.png b''
+2024-03-11 03:28:10,999 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 03:28:11,089 INFO: Request: GET /favicon.ico b''
+2024-03-11 03:28:11,089 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 17:22:59,895 INFO: Request: GET / b''
+2024-03-11 17:22:59,897 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 17:23:13,576 INFO: Request: GET /api/v1/ b''
+2024-03-11 17:23:13,576 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 17:23:24,336 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 17:23:24,762 INFO: Request: GET /favicon.ico b''
+2024-03-11 17:23:24,762 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 17:23:24,806 INFO: Request: GET /images/icons/gear.png b''
+2024-03-11 17:23:24,807 ERROR: Error: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2024-03-11 17:24:24,032 INFO: Request: GET /api/v1/weather-by-coordinates b''
+2024-03-11 17:24:24,033 ERROR: Error: 400 Bad Request: Missing required parameters
