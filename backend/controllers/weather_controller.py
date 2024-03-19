@@ -33,3 +33,6 @@ def get_weather_by_city():
         abort(404, 'Failed to fetch weather data')
 
     return jsonify(weather_data), 200
+
+
+
