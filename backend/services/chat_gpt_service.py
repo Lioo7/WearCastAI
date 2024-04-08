@@ -41,9 +41,9 @@ def process_interaction(
             current_app.logger.info(f"Response Content: {response_content}")
             return response_content
         else:
-            print("No choices found in the API response.")
+            current_app.logger.error("No choices found in the API response.")
     except openai.OpenAIError as e:
-        print(f"An OpenAI error occurred: {e}")
+        current_app.logger.error(f"An OpenAI error occurred: {e}")
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        current_app.logger.error(f"An unexpected error occurred: {e}")
     return None
